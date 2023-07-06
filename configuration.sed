@@ -1,4 +1,4 @@
-s/@STANDARD@/CIM-TEMPLATE/g
-s/@MODELNAME@/Conceptueel Informatiemodel Template/g
-s/@TITLE@/Titel van document/g
-s/@REPONAME@/dso-cim-template/g
+s/@STANDARD@/CIM-BHKV/g
+s/@MODELNAME@/Conceptueel Informatiemodel Bronhouderkoppelvlak/g
+s/@TITLE@/Conceptueel Informatiemodel Bronhouderkoppelvlak/g
+s/@REPONAME@/dso-cim-bhkv/g
