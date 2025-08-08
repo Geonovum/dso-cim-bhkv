@@ -1,16 +1,16 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<meta name="generator" content="ReSpec 34.1.4">
+<meta name="generator" content="ReSpec 35.3.0">
 <style>
 dfn{cursor:pointer}
-.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
 .dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
-.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
-.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
 .dfn-panel *{margin:0}
-.dfn-panel b{display:block;color:#000;margin-top:.25em}
-.dfn-panel ul a[href]{color:#333}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
 .dfn-panel>div{display:flex}
 .dfn-panel a.self-link{font-weight:700;margin-right:auto}
 .dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
@@ -48,8 +48,6 @@ div.imageinfo.overview img {max-width: none;}
 25%{transform:scale(1.25,1.25);opacity:.75}
 100%{transform:scale(1,1)}
 }
-:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
-dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
 a.bibref{text-decoration:none}
@@ -60,23 +58,11 @@ a.bibref{text-decoration:none}
 .respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
 }
 #references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
-cite .bibref{font-style:normal}
+cite .bibref{font-style:italic}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
-.toc a,.tof a{text-decoration:none}
-a .figno,a .secno{color:#000}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
-table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
-.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
-.simple th a{color:#fff;padding:3px 5px;text-align:left}
-.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
-.simple td{padding:3px 10px;border-top:1px solid #ddd}
-.simple tr:nth-child(even){background:#f0f6ff}
-.section dd>p:first-child{margin-top:0}
-.section dd>p:last-child{margin-bottom:0}
-.section dd{margin-bottom:1em}
-.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
 #issue-summary>ul{column-count:2}
 #issue-summary li{list-style:none;display:inline-block}
 details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
@@ -100,8 +86,9 @@ dd{margin-left:0}
 }
 </style>
 <style id="respec-nlgov">
-img.license{float:left;padding-right:5px}
+img.license{float:left;padding-right:5px;background:0 0}
 </style>
+<meta name="color-scheme" content="light">
 <style>
 ul.index{columns:30ch;column-gap:1.5em}
 ul.index li{list-style:inherit}
@@ -140,6 +127,7 @@ DSO.">
 </style>
 <script id="initialUserConfig" type="application/json">{
   "nl_organisationName": "Geonovum",
+  "nl_organisationStylesURL": "https://tools.geostandaarden.nl/respec/style/",
   "nl_organisationPublishURL": "https://docs.geostandaarden.nl/",
   "logos": [
     {
@@ -195,6 +183,7 @@ DSO.">
       "cv": "Candidate recommendation",
       "vv": "Proposed recommendation",
       "def": "Recommendation",
+      "ld": "Living document",
       "basis": "Document",
       "no": "Norm",
       "st": "Standard",
@@ -211,6 +200,7 @@ DSO.">
       "cv": "Consultatieversie",
       "vv": "Versie ter vaststelling",
       "def": "Vastgestelde versie",
+      "ld": "Levend document",
       "basis": "Document",
       "no": "Norm",
       "st": "Standaard",
@@ -228,17 +218,19 @@ DSO.">
       "sotd": "Status van dit document",
       "def": "Dit is de definitieve versie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
       "wv": "Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.",
-      "cv": "Dit is een consultatieversie. Commentaar over dit document kan gestuurd worden naar ",
+      "cv": "Dit is een consultatieversie.",
       "vv": "Dit is de definitieve conceptversie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
-      "basis": "Dit is een document zonder officiële status."
+      "basis": "Dit is een document zonder officiële status.",
+      "ld": "Dit is een levend document dat regelmatig gewijzigd wordt."
     },
     "en": {
       "sotd": "Status of this document",
       "def": "This is the definitive version of this document. Edits resulting from consultations have been applied.",
       "wv": "This is a working draft that can be changed, removed or replaced by other documents at any time. It is not a stable document.",
-      "cv": "This is a stable draft, published for public comment. Comments regarding this document may be sent to ",
+      "cv": "This is a stable draft, published for public comment.",
       "vv": "This is the final draft of this document. Edits resulting from consultations have been applied.",
-      "basis": "This document has no official standing."
+      "basis": "This document has no official standing.",
+      "ld": "This is a living document, which is updated regularly."
     }
   },
   "labelColor": {
@@ -246,7 +238,8 @@ DSO.">
     "wv": "#FF0000",
     "cv": "#045D9F",
     "vv": "#045D9F",
-    "basis": "#80CC28"
+    "basis": "#80CC28",
+    "ld": "#80CC28"
   },
   "licenses": {
     "cc0": {
@@ -338,7 +331,7 @@ DSO.">
     }
   ]
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
+<link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/base.css"></head>
 
 <body class="h-entry toc-inline"><div class="head">
     <a class="logo" href="https://www.geonovum.nl/geo-standaarden"><img alt="Geonovum" height="67" id="Geonovum" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg" width="132">
@@ -347,7 +340,7 @@ DSO.">
     <h2>
       Geonovum Informatiemodel<br>
       Werkversie
-      <time class="dt-published" datetime="2023-11-02">02 november 2023</time>
+      <time class="dt-published" datetime="2025-08-08">08 augustus 2025</time>
     </h2>
     <dl>
       
@@ -383,9 +376,9 @@ DSO.">
           <a rel="alternate" href="dso-cim-bhkv.pdf">pdf</a>
         </p>
     <p class="copyright">
-          Dit document valt onder de volgende licentie: 
-          <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img class="license" src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
-        </p>
+            Dit document valt onder de volgende licentie: 
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode" class="subfoot"><img class="license" src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Logo Creative Commons Attribution 4.0 International Public License"><br> Creative Commons Attribution 4.0 International Public License</a>
+          </p>
     <hr title="Separator for header">
   </div>
   <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>Dit document beschrijft het 'Conceptueel Informatiemodel Bronhouderkoppelvlak'. Dit is een conceptueel model van het
@@ -727,4 +720,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><div class="sidelabel">Geonovum Informatiemodel - Werkversie</div><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
+})()</script><div class="sidelabel">Geonovum Informatiemodel - Werkversie</div><script src="https://gitdocumentatie.logius.nl/publicatie/respec/fixup.js"></script></body></html>
